@@ -1,7 +1,7 @@
 const btn = document.querySelectorAll('.btn')
 const display = document.querySelector('.display')
 const checkBtn = document.querySelector('.confirm');
-
+const reset = document.querySelector('.reset')
 const position = []
 
 function checkClick () {
@@ -24,9 +24,14 @@ function checkClick () {
 
 function getWinner (position) {
   if (position[0][0] === position[1][0] || position[0][1]  === position[1][1] || Math.abs(position[0][0] - position[1][0]) === Math.abs(position[0][1] - position[1][1])) {
-    display.innerHTML= 'A Queen CAN attacked'
+    display.innerHTML= 'A Queen CAN be attacked'
   } else {
-    display.innerHTML = 'A Queen CANNOT attacked'
+    display.innerHTML = 'A Queen CANNOT be attacked'
   }
 }
+
+reset.addEventListener('click', () => {
+  window.location.reload()
+})
+
 checkClick()

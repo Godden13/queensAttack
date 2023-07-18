@@ -58,6 +58,12 @@ button:hover {
   margin: 20px;
 }
 
+.reset {
+  background-color:#5f5c5b;
+  border-radius: 10px;
+  margin: 20px;
+}
+
 #row1 button:nth-child(even),
 #row3 button:nth-child(even),
 #row5 button:nth-child(even),
